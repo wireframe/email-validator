@@ -19,6 +19,14 @@ class TestEmailValidator < Test::Unit::TestCase
       assert_equal 'Email is invalid', @user.errors.full_messages.to_sentence
     end
   end
+  context "object with email address containing double quotes" do
+    setup do
+      @user = User.create :email => '"mike" foo@test.com'
+    end
+    should 'have not error on email attribute' do
+      assert_equal 'Email is invalid', @user.errors.full_messages.to_sentence
+    end
+  end
 
   context "object with valid email address" do
     setup do
