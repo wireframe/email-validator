@@ -11,7 +11,6 @@ begin
     gem.homepage = "http://github.com/wireframe/email-validator"
     gem.authors = ["Ryan Sonnek"]
     gem.add_runtime_dependency "activerecord", ">= 2.2.3"
-    gem.add_runtime_dependency "tmail", ">= 1.2"
     gem.add_development_dependency "shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
