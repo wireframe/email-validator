@@ -5,12 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "email-validator"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{validate that email attribute contains valid email}
+    gem.description = %Q{validate that email attribute contains valid email}
     gem.email = "ryan@socialcast.com"
     gem.homepage = "http://github.com/wireframe/email-validator"
     gem.authors = ["Ryan Sonnek"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_runtime_dependency "activerecord", ">= 2.2.3"
+    gem.add_runtime_dependency "tmail", ">= 1.2"
+    gem.add_development_dependency "shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
