@@ -1,6 +1,6 @@
 = email-validator
 
-Description goes here.
+Convenient ActiveRecord Validator to validate valid email address on model.
 
 == Note on Patches/Pull Requests
  

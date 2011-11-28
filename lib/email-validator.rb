@@ -1,6 +1,11 @@
+require 'email-validator/version'
+require 'active_support/concern'
+require 'active_record'
 require File.join(File.dirname(__FILE__), 'rfc822')
 
 module EmailValidator
+  extend ActiveSupport::Concern
+
   module ClassMethods
     include RFC822
 
@@ -15,4 +20,4 @@ module EmailValidator
   end
 end
 
-ActiveRecord::Base.send(:extend, EmailValidator::ClassMethods)
+ActiveRecord::Base.send(:include, EmailValidator)
