@@ -1,3 +1,4 @@
+# encoding: binary
 # RFC822 Email Address Regex
 # -———————————-
 # Originally written by Cal Henderson
